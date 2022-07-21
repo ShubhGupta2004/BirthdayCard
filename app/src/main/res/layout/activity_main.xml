@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -18,26 +19,51 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@color/teal_200"
             android:text="@string/happy_birthday"
+            android:textAllCaps="true"
             android:textColor="#00695C"
             android:textSize="27sp"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="385dp"
-            android:textAllCaps="true"
-            android:textStyle="italic" />
+            tools:layout_editor_absoluteY="385dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="356dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/exp"
+            android:padding="1dp"
             android:scaleType="fitCenter"
             android:src="@drawable/img"
-            tools:ignore="ImageContrastCheck"
-            android:contentDescription="@string/exp" />
+            tools:ignore="ImageContrastCheck" />
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:text="@string/happy_birthday"
+            android:textAllCaps="true"
+            android:textColor="#00695C"
+            android:textSize="27sp"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="385dp" />
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
